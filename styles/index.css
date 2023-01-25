@@ -1,0 +1,106 @@
+/*-----HEADER CSS-----*/
+header {
+    background-color: #F2F2F2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: .5rem 4rem;
+}
+
+.logo {
+    width: 10%;
+}
+
+.search-form {
+    display: flex;
+
+    width: 35%;
+}
+
+.search-form  > input {
+    width: 85%;
+    padding: 0.2rem 1rem;
+
+    border: 1px solid #666373;
+    border-radius: 10px 0 0 10px;
+}
+
+.submit-btn {
+    background-color: #666373;
+
+    width: 15%;
+    padding: 0.2rem 1rem;
+
+    border: 1px solid #666373;
+    border-radius: 0 10px 10px 0;
+}
+
+.submit-btn > img {
+    width: 1.2rem;
+}
+
+.icon {
+    width: 2rem;
+}
+
+.navigator {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.navigator > a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #666373;
+}
+
+/*-----PRODUCTS SECTION CSS-----*/
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 2rem;
+    row-gap: 4rem;
+    justify-items: center;
+
+    width: 90%;
+}
+
+.product-card {
+    background-color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    min-height: 300px;
+
+    padding: 1rem 0;
+}
+
+.product-img {
+    width: 60%;
+}
+
+.details-btn {
+    background-color: #666373;
+    color: #F2F2F2;
+
+    font-size: 1rem;
+
+    border: none;
+    padding: .3rem 2rem;
+}
