@@ -1,3 +1,15 @@
+<?php
+
+include_once "./php/conexao.php";
+
+//pegando os dados de todos os tênis
+$stmt = $conexao->prepare("SELECT * FROM tenis");
+if($stmt->execute()){
+    $retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -35,26 +47,17 @@
 
     <section class="section">
         <div class="products-grid">
-            <div class="product-card">
-                <img class="product-img" src="./assets/images/boost350.png" alt="imagem do produto">
-                <h3 class="product-name">Tênis Yezzy</h3>
-                <span><strong>R$ </strong>1.900,00</span>
-                <button class="details-btn">VER MAIS</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="./assets/images/boost350.png" alt="imagem do produto">
-                <h3 class="product-name">Tênis Yezzy</h3>
-                <span><strong>R$ </strong>1.900,00</span>
-                <button class="details-btn">VER MAIS</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="./assets/images/boost350.png" alt="imagem do produto">
-                <h3 class="product-name">Tênis Yezzy</h3>
-                <span><strong>R$ </strong>1.900,00</span>
-                <button class="details-btn">VER MAIS</button>
-            </div>
+            <?php foreach ($retorno as $tupla) {
+                $nomeProduto = $tupla['nome'];
+                $preco = $tupla['preco'];
+            ?>
+                <div class="product-card">
+                    <img class="product-img" src="./assets/images/boost350.png" alt="imagem do produto">
+                    <h3 class="product-name"><?php echo $nomeProduto ?></h3>
+                    <span><strong>R$ </strong><?php echo $preco ?></span>
+                    <button class="details-btn">VER MAIS</button>
+                </div>
+            <?php } ?>
         </div>
     </section>
     
