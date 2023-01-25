@@ -1,0 +1,58 @@
+header {
+    background-color: #F2F2F2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: .5rem 4rem;
+}
+
+.logo {
+    width: 10%;
+}
+
+.search-form {
+    display: flex;
+
+    width: 35%;
+}
+
+.search-form  > input {
+    width: 85%;
+    padding: 0.2rem 1rem;
+
+    border: 1px solid #666373;
+    border-radius: 10px 0 0 10px;
+}
+
+.submit-btn {
+    background-color: #666373;
+
+    width: 15%;
+    padding: 0.2rem 1rem;
+
+    border: 1px solid #666373;
+    border-radius: 0 10px 10px 0;
+}
+
+.submit-btn > img {
+    width: 1.2rem;
+}
+
+.icon {
+    width: 2rem;
+}
+
+.navigator {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.navigator > a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #666373;
+
+}
